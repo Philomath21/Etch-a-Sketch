@@ -104,7 +104,7 @@ function selectColorScheme () {
                 // when your mouse passes over them, leaving a (pixelated) trail 
                 // through your grid like a pen would.
                 squareDiv.addEventListener("mouseover", () => {
-                    squareDiv.style.opacity += 0.1;
+                    squareDiv.style.opacity = Number(squareDiv.style.opacity) + 0.1;
                 })
                 rowDiv.appendChild(squareDiv);
             }
