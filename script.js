@@ -1,5 +1,7 @@
 // variable to store size value
 let sizeValue;
+// play message
+const playMessage = document.querySelector("#play-message");
 
 // function to get size input from user
 function getSize() {
@@ -9,6 +11,8 @@ function getSize() {
 
     // input validation
     if (1 <= x <= 100){
+        // Display play message
+        playMessage.textContent = "Select color scheme for the board, to play:";
         // delete the old grid in the container element
         document.getElementById("container").innerHTML = "";
         sizeValue = x;
@@ -44,6 +48,8 @@ function selectColorScheme () {
     let three = document.querySelector("#three");
 
     one.addEventListener("click", () => {
+        // Display play message
+        playMessage.textContent = "You can play now!";
         // delete the old grid in the container element
         document.getElementById("container").innerHTML = "";
         // create a size*size grid of div using two for loops
@@ -66,6 +72,8 @@ function selectColorScheme () {
     })
 
     two.addEventListener("click", () => {
+        // Display play message
+        playMessage.textContent = "You can play now!";
         // delete the old grid in the container element
         document.getElementById("container").innerHTML = "";
         // create a size*size grid of div using two for loops
@@ -88,6 +96,8 @@ function selectColorScheme () {
     })
 
     three.addEventListener("click", () => {
+        // Display play message
+        playMessage.textContent = "You can play now!";
         // delete the old grid in the container element
         document.getElementById("container").innerHTML = "";
         // create a size*size grid of div using two for loops
