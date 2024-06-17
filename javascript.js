@@ -1,3 +1,35 @@
+// variable to get the pixel color (black, random, or progressive darkening)
+var pixelColor = "white";
+
+// selecting black color
+let black = document.querySelector("#black");
+black.addEventListener("click", () => {
+    pixelColor = "black";
+})
+
+// selecting random color
+let randomColor = document.querySelector("#random-color");
+randomColor.addEventListener("click", () => {
+    pixelColor = "random";
+})
+// function to generate random color
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// selecting progressive darkening
+// let progressiveDarkening = document.querySelector("#progressive-darkening");
+// progressiveDarkening.addEventListener("click", () => {
+//     pixelColor = "progressive-darkening";
+// })
+
+
+  
 // get the container element
 let container = document.querySelector("#container");
 
@@ -15,7 +47,14 @@ function createBoard (size) {
             // when your mouse passes over them, leaving a (pixelated) trail 
             // through your grid like a pen would.
             squareDiv.addEventListener("mouseover", () => {
-                squareDiv.style.backgroundColor = "black";
+                if (pixelColor == "black"){
+                    squareDiv.style.backgroundColor = "black";
+                } else if (pixelColor == "random") {
+                    squareDiv.style.backgroundColor = getRandomColor();
+                }
+                // } else if (pixelColor == "progressive-darkening") {
+                //     squareDiv.style.opacity -= 0.1
+                // }
             })
             rowDiv.appendChild(squareDiv);
         }

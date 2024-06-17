@@ -12,11 +12,16 @@ body {
 }
 
 button {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+#size {
     /* flex item properties */
     flex: 0 0 32px;
     width: 100px;
-    border-radius: 8px;
-    font-size: 16px;
 }
 
 #container {
@@ -47,4 +52,33 @@ button {
     display: flex;
     gap: 0px;
     align-items: stretch;
+}
+
+#color-button-container {
+    /* flex item properties */
+    flex: 1 0 auto;
+    /* flex container properties */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#color-button-container button {
+        /* flex item properties */
+        flex: 0 0 100px;
+}
+
+#black {
+    background-color: black;
+    color: white;
+}
+
+#random-color {
+    background-color: blue;
+    color: white;
+}
+
+#progressive-darkening {
+    background-color: grey;
+    color: white;
 }
