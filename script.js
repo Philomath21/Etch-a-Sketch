@@ -10,7 +10,7 @@ function getSize() {
     let x = Number(prompt("Please specify the number of squares per side for the new grid: "))
 
     // input validation
-    if (1 <= x <= 100){
+    if (x >= 0 && x <= 100){
         // Display play message
         playMessage.textContent = "Select color scheme for the board, to play:";
         // delete the old grid in the container element
