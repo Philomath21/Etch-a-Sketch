@@ -11,6 +11,10 @@ body {
     gap: 10px;
 }
 
+p {
+    margin: 0px;
+}
+
 button {
     border-radius: 8px;
     font-size: 16px;
@@ -18,11 +22,40 @@ button {
     box-sizing: border-box;
 }
 
-#size {
+    #size {
+        /* flex item properties */
+        flex: 0 0 32px;
+        width: 100px;
+    }
+
+#color-button-container {
     /* flex item properties */
-    flex: 0 0 32px;
-    width: 100px;
+    flex: 1 0 auto;
+    /* flex container properties */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
+
+    #color-button-container button {
+        /* flex item properties */
+        flex: 0 0 100px;
+}
+
+    #one {
+        background-color: black;
+        color: white;
+    }
+
+    #two {
+        background-color: blue;
+        color: white;
+    }
+
+    #three {
+        background-color: grey;
+        color: white;
+    }
 
 #container {
     /* flex item properties */
@@ -36,49 +69,19 @@ button {
     flex-direction: column;
     align-items: stretch;
     gap: 0px;
-    
 }
 
-.row-div,
-.square-div {
-    /* flex item properties */
-    flex: 1 0 auto;
-    margin: 0px;
-    padding: 0px;
-}
-
-.row-div {
-    /* flex container properties */
-    display: flex;
-    gap: 0px;
-    align-items: stretch;
-}
-
-#color-button-container {
-    /* flex item properties */
-    flex: 1 0 auto;
-    /* flex container properties */
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-#color-button-container button {
+    .row-div,
+    .square-div {
         /* flex item properties */
-        flex: 0 0 100px;
-}
+        flex: 1 0 auto;
+        margin: 0px;
+        padding: 0px;
+    }
 
-#black {
-    background-color: black;
-    color: white;
-}
-
-#random-color {
-    background-color: blue;
-    color: white;
-}
-
-#progressive-darkening {
-    background-color: grey;
-    color: white;
-}
+    .row-div {
+        /* flex container properties */
+        display: flex;
+        gap: 0px;
+        align-items: stretch;
+    }
